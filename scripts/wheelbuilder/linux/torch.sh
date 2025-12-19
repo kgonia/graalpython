@@ -42,7 +42,7 @@ if [ -n "$GITHUB_RUN_ID" ]; then
     # There's already cmake in the manylinux image installed via pipx that is
     # too new to build torch, this downgrades it
     pipx install --force cmake==3.28
-    export USE_CUDA=0
+    export USE_CUDA=1
 fi
 export MAX_JOBS=4
 export BUILD_TEST=0
